@@ -1,6 +1,9 @@
 <template>
-  <div class="about" style=" display:flex;   
-   ">
+  <div
+    class="about"
+    style=" display:flex;   
+   "
+  >
     <v-container>
       <div
         class="logo-reg"
@@ -17,7 +20,11 @@
           <v-col class="box-reg__form" cols="12" md="6">
             <v-text-field label="введите имя" single-line solo></v-text-field>
 
-            <v-text-field label="введите адрес электронной почты" v-model="email" solo></v-text-field>
+            <v-text-field
+              label="введите адрес электронной почты"
+              v-model="email"
+              solo
+            ></v-text-field>
           </v-col>
           <v-col class="box-reg__form" cols="12" sm="6">
             <v-text-field
@@ -42,8 +49,12 @@
         </v-col>
       </v-form>
     </v-container>
-    <img style=" width:10%;height:20%; position:absolute;  
-   " src="../assets/law.png" alt />
+    <img
+      style=" width:10%;height:20%; position:absolute;  
+   "
+      src="../assets/law.png"
+      alt
+    />
   </div>
 </template>
 

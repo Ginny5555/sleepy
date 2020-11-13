@@ -1,8 +1,10 @@
 <template>
   <div class="home">
-    <v-container style="    display: inline-flex;
+    <v-container
+      style="    display: inline-flex;
     flex-direction: column;
-    height: 100%;">
+    height: 100%;"
+    >
       <img src="../assets/bed.png" alt />
       <div class="home-desk">
         <div id="nav">
@@ -13,26 +15,45 @@
             style="  background: #73727a;font-size: 12px; color: white;"
             class="write"
             @click.stop="dialog = true"
-          >создать пост</v-btn>
-          <router-link style="color:black;text-decoration:underline;" to="/exit">выход</router-link>
+            >создать пост</v-btn
+          >
+          <router-link style="color:black;text-decoration:underline;" to="/exit"
+            >выход</router-link
+          >
           <v-dialog v-model="dialog" @click="makePost()" max-width="700">
             <v-card>
-              <v-card-title class="headline">Что вам сегодня приснилось?</v-card-title>
+              <v-card-title class="headline"
+                >Что вам сегодня приснилось?</v-card-title
+              >
               <h4>Заголовок</h4>
               <v-col center cols="20" sm="6" md="10">
-                <v-text-field label="Solo" v-model="editedTit" @click="editTitle()" solo></v-text-field>
+                <v-text-field
+                  label="Solo"
+                  v-model="editedTit"
+                  @click="editTitle()"
+                  solo
+                ></v-text-field>
               </v-col>
               <h4>Описание</h4>
               <v-col cols="20" md="10">
-                <v-textarea solo name="input-19-10" label="Solo textarea" v-model="dreamDesEdit"></v-textarea>
+                <v-textarea
+                  solo
+                  name="input-19-10"
+                  label="Solo textarea"
+                  v-model="dreamDesEdit"
+                ></v-textarea>
               </v-col>
 
               <v-card-actions>
                 <v-spacer></v-spacer>
 
-                <v-btn color=" darken-1" text @click="dialog = false">отменить</v-btn>
+                <v-btn color=" darken-1" text @click="dialog = false"
+                  >отменить</v-btn
+                >
 
-                <v-btn color="darken-1" text @click="saveAndclose">сохранить</v-btn>
+                <v-btn color="darken-1" text @click="saveAndclose"
+                  >сохранить</v-btn
+                >
               </v-card-actions>
             </v-card>
           </v-dialog>
